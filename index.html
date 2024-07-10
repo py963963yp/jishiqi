@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Customizable Timer</title>
+<script>
+function startTimer(duration) {
+    var timer = duration, minutes, seconds;
+    var interval = setInterval(function () {
+        minutes = parseInt(timer / 60, 10);
+        seconds = parseInt(timer % 60, 10);
+
+        minutes = minutes < 10 ? "0" + minutes : minutes;
+        seconds = seconds < 10 ? "0" + seconds : seconds;
+
+        document.getElementById("timer").innerHTML = minutes + ":" + seconds;
+
+        if (--timer < 0) {
+            timer = duration;
+        }
+    }, 1000);
+}
+
+window.onload = function () {
+    // 获取用户输入的时间
+    var userInput = document.getElementById("timeInput").value;
+    var timeInSeconds = parseInt(userInput, 10) * 60; // 将分钟转换为秒
+
+    // 检查输入是否有效
+    if (!isNaN(timeInSeconds) && timeInSeconds > 0) {
+        startTimer(timeInSeconds);
+    } else {
+        alert("请输入有效的分钟数！");
+    }
+};
+</script>
+</head>
+<body>
+<h2>设置计时器</h2>
+<input type="number" id="timeInput" placeholder="输入分钟数">
+<button onclick="startTimer(0)">开始计时</button>
+<div id="timer">00:00</div>
+</body>
+</html>
