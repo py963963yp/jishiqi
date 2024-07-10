@@ -1,171 +1,252 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Myclock</title>
-    <style>
-        *{
-            margin: 0;
-            padding: 0;
-        }
-        /* 时钟表盘位置*/
-        .clock{
-            width: 400px;
-            height: 400px;
-            margin-top: 50px;
-            margin-left: auto;
-            margin-right: auto;
-            overflow: hidden;
-        }
-        /* 表盘样式*/
-        .clockTable{
-            width: 300px;
-            height: 300px;
-            background-color: rgba(0,0,255,0.5);
-            border: 1px rgba(0,0,0,0.5) solid;
-            margin: 50px;
-            position: relative;
-            border-radius: 100%;
-            overflow: hidden;
-        }
-        /* 时针样式*/
-        .hour{
-            position: absolute;
-            H: 85时间。;
-            box-sizing: border-box;
-            年: 1哪里 月=0; #000 我;
-            var mark =: 148'<div style="transform-origin: bottom;left: 147px;position: absolute;width: 2px;height: 150px;transform:rotateZ(';
-            如果: 148如果;
-            transform-origin: 身高（h）=;
-            border-radius: 50H;
-        }
-D+如果+
-        .minute{
-            +/开始时指针指向，佑佑180+: $;
-            （“: 100. hour”）. css（;
-            box-sizing: border-box;
-            小时）/you you，（h*30）；360,60,60（m/2）: 1变换：如果（ =>;
-（h） class=;
-（m） class=;
-德
-            border-radius: 50<H M=;
-        }
-共
-        .second{
-            =<你你，m*6）（如果+（m*6+180）+（s/10））+ 德;
-如果（h<10）*6+180
-            box-sizing: border-box;
-            （/10: 1=“.第二” #000 ）.;
-            "m='0'+m you（s<10）{s='0'+s（": 148"// 实时调用获取系统时间(";
-            =$degonload+: 148超文本标记语言;
-            transform-origin: window.setInterval（“Time（）”，500）；;
-            border-radius: 50S;
-        }
-        .numClock{
-            =时间。: 300getSeconds;
-            //getHours: 50哪里;
-            text-align: M<;
-            line-height: 50<时间。==;
-会议记录哪里;
-            font-size: 20S <;
-        }
-时间。
-getSeconds
-<body>
-将不足两位的数字通过字符串拼接成两位"clock">
-如果"clockTable" id="circle">
-月"hour"></div>
-月份"minute"></div>
-月份"second"></div>
-        </section>
-    </section>
-如果"numClock"></section>
-
-D
-#000 </"https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>
-时间。
-getSeconds"jquery.js"getHours
-    <!-- 
-哪里
-M
-    -->
-
-时间。
-会议记录哪里;
-S
-哪里
-
-M
-#000 </
-（（
-变换
-D
-</+ d>: 148<
-变换-你想看你的吗；：147
-yodo（） x；：2px；：150px；：rotateZ
-            }
-            cir.innerHTML+=mark
-        }
-：2（
-：
-
-部分
-=<section class=: 148<
-'deg）；文本-bioto：+（H*30+180）+（M/2）+：10'
-            /你="deg）"{>12"m='0'+m you(s<10){s='0'+s("{（“Time（）”，500）；you mayotomonth = time.getMonth()+1       // JQ获取系统月份时需要多加1
-            var d = time.getDate()              // 不能使用getDay()的方式获取当前日期
-            var h = time.getHours()
-            var m = time.getMinutes()
-            var s = time.getSeconds()
-
-            //将不足两位的数字通过字符串拼接成两位
-            //window.setInterval（“Time（）”，500）；()(month < 10){
-                month = '0' + month
-            }
-            $degonload+(超文本标记语言< 10){
-                哪里 = '0' + d
-            }
-            window.setInterval（“Time（）”，500）；(D < 10){
-如果
-            }
-剧本
-//使用数组存放时钟上的希腊字母
-            }
-哪里
-getSeconds
+            * {
+                border: 0;
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
             }
 
-将不足两位的数字通过字符串拼接成两位
-如果
-
-月
-月份
-月份
-//第一个***************************************************************************************************************************************************************************************************
-标记+=至（+（h*30+180）+（m/2）+]deg]=[[会议记录]：共级<div style=德></div>innerHTML，//you mayou
+            :root {
+                --hue: 223;
+                --bg: hsl(var(--hue), 10%, 90%);
+                --fg: hsl(var(--hue), 10%, 10%);
+                font-size: calc(16px + (24 - 16) * (100vw - 320px) / (1280 - 320));
             }
 
-新的日期哪里英语字母表的第 25 you you（“圆”）
-=时间。
-年（年=0；<60；i++）{
-var mark =px；背景-巨+((i+1)*6)+'deg);">'
-            })
-如果（（i+1）％5==0）{
-如果
-身高（H）=you you you mayou（i+1）/5）*30）+/you you 180+[60 变换-你想看你的吗；：147*6'deg）；文本-bioto：+（H*30+180）+（M/2）+：10'$（）。小时）。css（{.小时]）/12 you you you，（H*30）；360,60,60（m/2）（{+1）/5）-1]+'</div>'+'</div>'）
-            })
-}[会议记录]你[>"） to（+（h*30+180）+（m/2）+]deg]{
-“transform”：如果+（m*6+180）+（s/10））++（H*30+180）+（M/2）+会议记录（//<！-引入 jQuery你喜欢 60 Mayoto，（M*6）（['</'<"deg）" ：=超文本标记语言（）''deg）；文本-bioto：+（H*30+180）+（M/2）+：10'//风格#000000；）rotateZ（"）
-如果+（m*6+180）+（s/10））+[$变换-你想看你的吗；：147 x；：2px；：150px；：rotateZ+（s*6+180）+[：2（]）]
-            })
-        }
+            body,
+            button {
+                color: #fff;
+                font: 1em/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            }
 
-<！-引入 jQuery你喜欢吗
-边界-半径：50
-S
-        }
-    </script>
-</body>
-    </html>
+            body {
+                background-color: #1F1F1F;
+                height: 100vh;
+                display: grid;
+                place-items: center;
+            }
+
+            .progress-clock {
+                display: grid;
+                justify-content: center;
+                align-content: center;
+                position: relative;
+                text-align: center;
+                width: 16em;
+                height: 16em;
+            }
+
+            .progress-clock__time-date,
+            .progress-clock__time-digit,
+            .progress-clock__time-colon,
+            .progress-clock__time-ampm {
+                transition: color 0.2s linear;
+                -webkit-user-select: none;
+                -moz-user-select: none;
+                user-select: none;
+            }
+
+            .progress-clock__time-date,
+            .progress-clock__time-digit {
+                background: transparent;
+            }
+
+            .progress-clock__time-date,
+            .progress-clock__time-ampm {
+                grid-column: 1 / 6;
+            }
+
+            .progress-clock__time-date {
+                font-size: 0.75em;
+                line-height: 1.33;
+            }
+
+            .progress-clock__time-digit,
+            .progress-clock__time-colon {
+                font-size: 2em;
+                font-weight: 400;
+                grid-row: 2;
+            }
+
+            .progress-clock__time-colon {
+                line-height: 1.275;
+            }
+
+            .progress-clock__time-ampm {
+                cursor: default;
+                grid-row: 3;
+            }
+
+            .progress-clock__rings {
+                display: block;
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                z-index: -1;
+            }
+
+            .progress-clock__ring {
+                opacity: 0.1;
+            }
+
+            .progress-clock__ring-fill {
+                transition:
+                    opacity 0s 0.3s linear,
+                    stroke-dashoffset 0.3s ease-in-out;
+            }
+
+            .progress-clock__ring-fill--360 {
+                opacity: 0;
+                stroke-dashoffset: 0;
+                transition-duration: 0.3s;
+            }
+
+            [data-group]:focus {
+                outline: transparent;
+            }
+
+            [data-units] {
+                transition: opacity 0.2s linear;
+            }
+
+            [data-group="d"]:focus,
+            [data-group="d"]:hover {
+                color: hsl(333, 90%, 55%);
+            }
+
+            [data-group="h"]:focus,
+            [data-group="h"]:hover {
+                color: hsl(33, 90%, 55%);
+            }
+
+            [data-group="m"]:focus,
+            [data-group="m"]:hover {
+                color: hsl(213, 90%, 55%);
+            }
+
+            [data-group="s"]:focus,
+            [data-group="s"]:hover {
+                color: hsl(273, 90%, 55%);
+            }
+
+            [data-group]:focus~.progress-clock__rings [data-units],
+            [data-group]:hover~.progress-clock__rings [data-units] {
+                opacity: 0.2;
+            }
+
+            [data-group="d"]:focus~.progress-clock__rings [data-units="d"],
+            [data-group="d"]:hover~.progress-clock__rings [data-units="d"],
+            [data-group="h"]:focus~.progress-clock__rings [data-units="h"],
+            [data-group="h"]:hover~.progress-clock__rings [data-units="h"],
+            [data-group="m"]:focus~.progress-clock__rings [data-units="m"],
+            [data-group="m"]:hover~.progress-clock__rings [data-units="m"],
+            [data-group="s"]:focus~.progress-clock__rings [data-units="s"],
+            [data-group="s"]:hover~.progress-clock__rings [data-units="s"] {
+                opacity: 1;
+            }
+
+            /* Dark theme */
+            @media (prefers-color-scheme: dark) {
+                :root {
+                    --bg: hsl(var(--hue), 10%, 10%);
+                    --fg: hsl(var(--hue), 10%, 90%);
+                }
+
+                .progress-clock__ring {
+                    opacity: 0.2;
+                }
+            }
+        
+    
+    
+        
+            
+                Sunday
+
+                January
+                1
+            
+            12:00:00
+            AM
+            
+                
+                    
+                        
+                        
+                    
+                    
+                        
+                        
+                    
+                    
+                        
+                        
+                    
+                    
+                        
+                        
+                    
+                
+                
+                
+                    
+                    
+                
+                
+                
+                    
+                    
+                
+                
+                
+                    
+                    
+                
+                
+                
+                    
+                    
+                
+            
+        
+    
+    
+        window.addEventListener("DOMContentLoaded", () => {
+            const clock = new ProgressClock("#clock");
+        });
+
+        class ProgressClock {
+            constructor(qs) {
+                this.el = document.querySelector(qs);
+                this.time = 0;
+                this.updateTimeout = null;
+                this.ringTimeouts = [];
+                this.update();
+            }
+            getDayOfWeek(day) {
+                switch (day) {
+                    case 1:
+                        return "Monday";
+                    case 2:
+                        return "Tuesday";
+                    case 3:
+                        return "Wednesday";
+                    case 4:
+                        return "Thursday";
+                    case 5:
+                        return "Friday";
+                    case 6:
+                        return "Saturday";
+                    default:
+                        return "Sunday";
+                }
+            }
+            getMonthInfo(mo, yr) {
+                switch (mo) {
+                    case 1:
+                        return {
+                            name: "February", days: yr % 4 === 0 ? 29 : 28
+                        };
+                    case 2:
+                   
